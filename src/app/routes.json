@@ -1,38 +1,16 @@
-[
-	{
-		"stateName": "todo",
-		"urlPrefix": "/todo",
-		"type": "load",
-		"src": "app/todo/todo"
-	},
-	{
-		"stateName": "react",
-		"urlPrefix": "/react",
-		"type": "load",
-		"src": "app/react/exampleApplication"
-	},
-	{
-		"stateName": "login",
-		"urlPrefix": "/login",
-		"type": "load",
-		"src": "app/login/login"
-	},
-	{
-		"stateName": "dashboards",
-		"urlPrefix": "/dashboards",
-		"type": "load",
-		"src": "app/dashboard/dashboard"
-	},
-	{
-		"stateName": "admin",
-		"urlPrefix": "/admin",
-		"type": "load",
-		"src": "app/admin/admin"
-	},
-	{
-		"stateName": "forms",
-		"urlPrefix": "/forms",
-		"type": "load",
-		"src": "app/forms/forms"
-	}
-]
+[{
+	"stateName": "home",
+	"urlPrefix": "/",
+	"type": "load",
+	"src": "app/home/home"
+}, {
+	"stateName": "subroute",
+	"urlPrefix": "/subroute",
+	"type": "load",
+	"src": "app/subroute/subroute"
+}, {
+	"stateName": "subroute2",
+	"urlPrefix": "/subroute2",
+	"type": "load",
+	"src": "app/subroute2/subroute"
+}]

@@ -1,0 +1,27 @@
+<h4>
+Welcome to subroute!
+</h4>
+
+<!-- Button to trigger a default modal with a scope as an object {title:'', content:'', etc.} -->
+<button type="button" class="btn btn-lg btn-primary" data-animation="am-fade-and-scale" data-placement="center" bs-modal="subRouteCtrl.modal">Click to toggle modal
+<br>
+<small>(using an object)</small>
+</button>
+<!-- You can use a custom html template with the `data-template` attr -->
+<button type="button" class="btn btn-lg btn-danger" ng-click="subRouteCtrl.showModal()">Custom Modal
+<br>
+<small>(using data-template)</small>
+</button>
+
+<hr>
+<button type="button" class="btn btn-lg btn-danger" data-animation="am-fade-and-slide-top" data-template='app/subroute/modal.tpl.html' bs-modal="modal">Custom Modal
+<br>
+<small>(using data-template)</small>
+</button>
+
+
+<hr>
+
+<a ui-sref='home'>Home</a>
+<a ui-sref='subroute'>Subroute</a>
+<a ui-sref='subroute2'>Subroute2</a>
