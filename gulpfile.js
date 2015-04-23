@@ -5,29 +5,6 @@ var situation = gulpHelpers.situation();
 var _ = gulpHelpers.framework('_');
 var runSequence = gulpHelpers.framework('run-sequence');
 
-var browserSync = require('browser-sync');
-
-// Static server.
-gulp.task('serve', function() {
-	browserSync.init([path.output], {
-		open: false,
-		ui: {
-			port: 8080
-		},
-		notify: false,
-		ghostMode: false,
-		port: process.env.PORT || 9000,
-		server: {
-			baseDir: [path.output],
-			routes: {
-				'/system.config.js': './system.config.js',
-				'/jspm_packages': './jspm_packages'
-			}
-		}
-	});
-});
-
-
 var path = {
 	source: 'src/**/*.js',
 	coffee: 'src/**/*.coffee',
@@ -37,7 +14,7 @@ var path = {
 	html: '**/*.html',
 	templates: ['src/**/*.tpl.html', '!src/index.tpl.html'],
 	less: ['src/**/*.less', '!src/assets/**/*.less'],
-	themes: ['src/assets/themes/*.less', 'src/assets/bootstrap/bootstrap.less'],
+	themes: 'src/assets/themes/*.less',
 	themesOutput: 'dist/assets/themes/',
 	output: 'dist/',
 	indexHtmlOutput: 'dist/index.html',
@@ -219,11 +196,11 @@ taskMaker.defineTask('karma', {
 	taskName: 'karma',
 	configFile: path.karmaConfig
 });
-// taskMaker.defineTask('browserSync', {
-// 	taskName: 'serve',
-// 	config: serverOptions,
-// 	historyApiFallback: true
-// });
+taskMaker.defineTask('browserSync', {
+	taskName: 'serve',
+	config: serverOptions,
+	historyApiFallback: true
+});
 taskMaker.defineTask('routeBundler', {
 	taskName: 'routeBundler',
 	config: routeBundleConfig

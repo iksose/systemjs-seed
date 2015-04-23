@@ -1,24 +1,21 @@
 import angular from 'angular';
 import subrouteTpl2 from 'app/subroute2/subroute.tpl';
-import modal from 'common/components/modal';
-import modalTemplate from 'app/subroute/modal.tpl';
 
-var subRouteModule = angular.module('subroute2', [subrouteTpl2.name, modal.name, modalTemplate.name])
+var subRouteModule2 = angular.module('subroute2', [subrouteTpl2.name])
 	.config(function($stateProvider) {
 		$stateProvider.state('subroute2', {
 			url: '/subroute2',
 			templateUrl: subrouteTpl2.name,
-			controller: 'SubRouteController',
+			controller: 'SubRouteController2',
 			controllerAs: 'subRouteCtrl'
 		});
 	})
 
 
-function SubRouteController($modal, $scope) {
-	this.$modal = $modal;
-	this.$scope = $scope;
+function SubRouteController2($scope) {
+	console.log("Subroute ctrl 2!", subrouteTpl2.name)
 };
-SubRouteController.prototype.showModal = function() {
+SubRouteController2.prototype.showModal = function() {
 	console.log("Show modal");
 	var modal = this.$modal({
 		scope: this.$scope,
@@ -27,6 +24,6 @@ SubRouteController.prototype.showModal = function() {
 	});
 }
 
-subRouteModule.controller('SubRouteController', SubRouteController);
+subRouteModule2.controller('SubRouteController2', SubRouteController2);
 
-export default subRouteModule;
+export default subRouteModule2;

@@ -5,7 +5,7 @@ import cardDirective from 'app/home/directives/cards';
 var adminModule = angular.module('home', [homeTpl.name, cardDirective.name])
 	.config(function($stateProvider) {
 		$stateProvider.state('home', {
-			url: '/',
+			url: '/home',
 			templateUrl: homeTpl.name,
 			controller: 'HomeController',
 			controllerAs: 'homeCtrl'

@@ -1,9 +1,4 @@
 [{
-	"stateName": "home",
-	"urlPrefix": "/",
-	"type": "load",
-	"src": "app/home/home"
-}, {
 	"stateName": "subroute",
 	"urlPrefix": "/subroute",
 	"type": "load",
@@ -13,4 +8,9 @@
 	"urlPrefix": "/subroute2",
 	"type": "load",
 	"src": "app/subroute2/subroute"
+}, {
+	"stateName": "home",
+	"urlPrefix": "/home",
+	"type": "load",
+	"src": "app/home/home"
 }]

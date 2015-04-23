@@ -1,5 +1,5 @@
 import angular from 'angular';
-import 'assets/themes/bootstrap.css!';
+// import 'assets/themes/bootstrap.css!';
 import router from 'oclazyload-systemjs-router';
 import futureRoutes from 'app/routes.json!';
 
